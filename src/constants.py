@@ -1,0 +1,1 @@
+COMMON_IGNORED_FILES = {".git"}

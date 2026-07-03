@@ -10,6 +10,7 @@ requires-python = ">=3.13"
 dependencies = [
     "langchain>=1.3.11",
     "python-dotenv>=1.2.2",
+    "rich>=15.0.0",
 ]
 
 [project.scripts]
@@ -19,7 +20,30 @@ minicode = "minicode:main"
 deepseek = [
     "langchain-deepseek>=1.1.0",
 ]
+anthropic = [
+    "langchain-anthropic>=0.3.0",
+]
+openai = [
+    "langchain-openai>=0.2.0",
+]
+google = [
+    "langchain-google-genai>=2.0.0",
+]
+groq = [
+    "langchain-groq>=0.2.0",
+]
+ollama = [
+    "langchain-ollama>=0.2.0",
+]
 
 [build-system]
 requires = ["uv_build>=0.11.20,<0.12.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "minicode[deepseek,ollama]",
+]
+
+[tool.uv.sources]
+minicode = { workspace = true }
