@@ -9,7 +9,7 @@ Two kinds of helpers live here:
    itself stays a clean two-line dispatch instead of inline if/elif logic.
 """
 
-from .rich_text_service import print_assistant_text, print_tool_call, print_tool_result
+from minicode.rich_text_service import print_assistant_text, print_tool_call, print_tool_result
 
 import os
 

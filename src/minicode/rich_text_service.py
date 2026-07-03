@@ -17,7 +17,7 @@ from rich.rule import Rule
 from rich.syntax import Syntax
 from rich.table import Table
 
-from .constants import LOGO, MODEL
+from minicode.constants import LOGO, MODEL
 
 CONSOLE = Console()
 
@@ -50,14 +50,13 @@ def print_banner(thread_id: str) -> None:
     CONSOLE.print("Type a task and press Enter. Type 'exit' or 'quit' to stop.\n", style="dim")
 
 
-def read_task() -> str:
+def read_task():
     """A bordered prompt line, then a plain input() beneath it."""
     CONSOLE.print(Rule(style="cyan"))
     try:
         task = CONSOLE.input("[bold cyan]>[/bold cyan] ")
     except KeyboardInterrupt:
-        print_goodbye()
-        exit(0)
+        return None
     return task.strip()
 
 

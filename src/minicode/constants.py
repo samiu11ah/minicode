@@ -9,8 +9,6 @@ ever needs to change in one spot.
 # --- Model ---
 # Format is "provider:model-name" (what LangChain's init_chat_model expects).
 MODEL = "deepseek:deepseek-v4-pro"
-# MODEL = "anthropic:claude-sonnet-5"
-# MODEL = "openai:gpt-4.1-mini"
 
 # --- Tool behavior ---
 COMMON_IGNORED_FILES = {".git", "__pycache__", "node_modules", ".venv", "venv"}

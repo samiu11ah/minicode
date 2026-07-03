@@ -13,9 +13,9 @@ import subprocess
 
 from langchain_core.tools import tool
 
-from .constants import BASH_TIMEOUT_SECONDS, COMMON_IGNORED_FILES, MAX_OUTPUT_CHARS, SEARCH_CONTEXT_LINES, SEARCH_TIMEOUT_SECONDS
-from .rich_text_service import code_preview, confirm, diff_preview
-from .utils import ToolError, safe_path
+from minicode.constants import BASH_TIMEOUT_SECONDS, COMMON_IGNORED_FILES, MAX_OUTPUT_CHARS, SEARCH_CONTEXT_LINES, SEARCH_TIMEOUT_SECONDS
+from minicode.rich_text_service import code_preview, confirm, diff_preview
+from minicode.utils import ToolError, safe_path
 
 
 @tool
